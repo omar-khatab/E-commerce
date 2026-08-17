@@ -1,0 +1,36 @@
+:root {
+    --main-color : #1dca5c;
+    --bg-color : #F8FAFC;
+    --p-color : #888;
+    --white-color : #fff;
+    --color-heading : #253237;
+    --border-color : #d6d6d6d5; 
+    --duration-time : 0.3s;
+}
+.hero {
+  position: relative;
+  margin-top: 30px;
+}
+.hero .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+}
+.hero .content h3 {
+  text-transform: uppercase;
+  font-size: 3vw;
+  font-style: italic;
+  margin-bottom: 0.4vw;
+}
+.hero .content h4 {
+  font-size: 3vw;
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 2vw;
+  line-height: 1.1;
+}
+.hero .content p {
+  font-size: 1vw;
+  margin: 2.5vw 0;
+}

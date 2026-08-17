@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Roboto", sans-serif; */
+/* font-family: "Lato", sans-serif; */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* Start variable */
+:root {
+    --main-color : #1dca5c;
+    --bg-color : #F8FAFC;
+    --p-color : #888;
+    --white-color : #fff;
+    --color-heading : #253237;
+    --border-color : #d6d6d6d5; 
+    --duration-time : 0.3s;
+}
+/* End variable */
+
+body {
+    background-color: var(--white-color);
+    font-family: "Roboto", sans-serif;
+    padding-top: 150px;
+}
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: var(--color-heading);
+    font-family: "Lato", sans-serif;
+}
+
+p {
+    color: var(--p-color);
+    line-height: 1.7;
+}
+
+span {
+    color: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-heading);
+}
+li {
+    list-style: none;
+}
+
+input, textarea, button, select {
+    outline: none;
+    border: none;
+}
+
+/* Start Global Rules */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large*/
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules*/
+/* start global button */
+.btn {
+    padding: 15px 10px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    transition: var(--duration-time);
+    gap: 10px;
+    width: fit-content;
+}
+.btn:hover {
+    scale: 1.1;
+}
+/* end global button */
+/* Start Loading */
+.skelton {
+    background-color: #e2e5e7;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    );
+    background-size: 40px 100%;
+    background-position: left -40px top 0;
+    background-repeat: no-repeat;
+    animation: shine 1s ease infinite;
+}
+@keyframes shine {
+    to {
+            background-position: right -40px top 0;
+    }
+}
+/* End Loading */
+
+/* Start Toast */
+.toastWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+}
+.toastWrapper .toastImg {
+    width: auto;
+    height: 50px;
+}
+.toastWrapper .toastContent {
+    font-size: 14px;
+}
+.toastWrapper .toastContent strong{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.toastWrapper .toastContent .btn {
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+/* End Toast */

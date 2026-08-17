@@ -1,0 +1,144 @@
+:root {
+    --main-color : #1dca5c;
+    --bg-color : #F8FAFC;
+    --p-color : #888;
+    --white-color : #fff;
+    --color-heading : #253237;
+    --border-color : #d6d6d6d5; 
+    --duration-time : 0.3s;
+}
+.checkout {
+    margin: 50px 0;
+}
+.checkout .orderSummary {
+    width: 45%;
+    padding: 0 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 8px 10px #c0bfbf44;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.checkout .orderSummary h1 {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+.checkout .items {
+    height: 350px;
+    overflow-y: auto;
+}
+.checkout .items .itemCart {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 125px;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 20px;
+}
+.checkout .items .itemCart:last-child {
+    border-bottom: none;
+}
+.checkout .items .itemCart .imageName {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.checkout .items .itemCart .imgItem {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkout .items .itemCart img {
+    width: auto;
+    height: 80px;
+}
+.checkout .items .itemCart h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.checkout .items .itemCart .deleteItem {
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: rgb(183, 18, 18);
+}
+.checkout .items .itemCart .deleteItem svg {
+    cursor: pointer;
+    transition: var(--duration-time);
+}
+.checkout .items .itemCart .deleteItem svg:hover {
+    scale: 1.2;
+}
+.checkout .items .itemCart .quantityControl {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+} 
+.checkout .items .itemCart .quantityControl button {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px;
+}
+.checkout .items .itemCart .quantity {
+    font-size: 18px;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+}
+.checkout .bottomSummary {
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+.checkout .bottomSummary .shopTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkout .bottomSummary .shopTable p {
+    font-size: 20px;
+    color: var(--color-heading);
+}
+.checkout .bottomSummary .shopTable .totalCheckout {
+    font-size: 20px;
+    font-weight: bold;
+}
+.checkout .bottomSummary .buttonDiv {
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+.checkout .bottomSummary .buttonDiv button {
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    padding: 15px 0;
+    outline: none;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--duration-time) ease-in-out;
+}
+.checkout .bottomSummary .buttonDiv button:hover {
+    background: transparent;
+    color: var(--main-color);
+}
