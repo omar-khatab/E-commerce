@@ -2,7 +2,7 @@
 
 Live Demo: https://e-commerce-three-coral-58.vercel.app/
 
-Tech: React, Vite, React Router, Context API
+Tech: React, Vite, React Router, Context API, Swiper.js, react-hot-toast, framer-motion
 
 Features:
 - Product listing with filters
