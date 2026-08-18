@@ -5,7 +5,6 @@ import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoadi
 import './Home.css'
 
 import { useEffect, useState } from "react"
-import { v4 as uuidv4 } from 'uuid';
 
 function Home() {
 
@@ -52,12 +51,12 @@ function Home() {
       <HeroSlider/>
       {loading ? 
       // Loading component of slide product
-      categories.map(() => {
-      return <SlideProductLoading key={uuidv4()}/>
+      categories.map((c) => {
+      return <SlideProductLoading key={c}/>
       })
       :
       categories.map((c) => {
-        return <SlideProduct key={uuidv4()} data = {products[c]} title = {c.replace("-", " ")} />
+        return <SlideProduct key={c} data = {products[c]} title = {c.replace("-", " ")} />
       })
       }
   </PageTransition>

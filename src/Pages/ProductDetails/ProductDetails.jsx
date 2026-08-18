@@ -7,6 +7,7 @@ import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoadi
 import ProductImages from "./ProductImages";
 import ProductInfo from "./ProductInfo";
 import PageTransition from "../../Components/PageTransition";
+
 function Productdetails() {
     
     const {id} = useParams()

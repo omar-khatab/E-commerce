@@ -3,7 +3,6 @@ import { useLocation } from "react-router";
 import PageTransition from "../Components/PageTransition";
 import SlideProductLoading from "../Components/SlideProduct/SlideProductLoading";
 import Product from "../Components/SlideProduct/Product";
-import { v4 as uuidv4 } from 'uuid';
 
 function SearchResults() {
     // get the string after query that inside the link of search
@@ -29,12 +28,12 @@ function SearchResults() {
         // query isn't empty
         if (query) fetchResults();
     },[query])
-    console.log(results)
+    
     return (
-         <PageTransition>
+        <PageTransition>
       <div className="categoryProducts">
       {loading ? (
-        <SlideProductLoading key={uuidv4()}/>
+        <SlideProductLoading />
       ): results.length > 0 ? (
         (
           <div className="container">
@@ -43,15 +42,15 @@ function SearchResults() {
             </div>
           <div className="products">
             {results.map((item) => {
-              return <Product item={item} key={uuidv4()}/>
+              return <Product item={item} key={item.id}/>
             })}
           </div>
       </div>
         )
       ) : (
-       <div className="container">
+      <div className="container">
             <p>Results Not Found</p>
-       </div>
+      </div>
       )
       }
       </div>

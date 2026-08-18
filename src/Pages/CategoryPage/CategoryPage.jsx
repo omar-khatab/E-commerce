@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import Product from "../../Components/SlideProduct/Product"
-import { v4 as uuidv4 } from 'uuid';
 import './CategoryPage.css'
 import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoading";
 import PageTransition from "../../Components/PageTransition";
@@ -26,7 +25,7 @@ function CategoryPage() {
     <PageTransition>
       <div className="categoryProducts">
       {loading ? (
-        <SlideProductLoading key={uuidv4()}/>
+        <SlideProductLoading/>
       ):(
           <div className="container">
             <div className="topSlide">
@@ -35,7 +34,7 @@ function CategoryPage() {
             </div>
           <div className="products">
             {categoryProducts.products.map((item) => {
-              return <Product item={item} key={uuidv4()}/>
+              return <Product item={item} key={item.id}/>
             })}
           </div>
       </div>

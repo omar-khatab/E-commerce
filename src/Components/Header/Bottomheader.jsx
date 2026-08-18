@@ -1,7 +1,6 @@
 
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { v4 as uuidv4 } from 'uuid';
 import { PiSignInBold } from "react-icons/pi";
 import { FaUserPlus } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -23,10 +22,10 @@ function Bottomheader() {
   const location = useLocation()
 
   const linksNav = [
-  {title : "Home", link : "/"},
-  {title : "About", link : "/about"},
-  {title : "Blog", link : "/blog"},
-  {title : "Contact", link : "/contact"},
+  {id : 1, title : "Home", link : "/"},
+  {id : 2, title : "About", link : "/about"},
+  {id : 3, title : "Blog", link : "/blog"},
+  {id : 4, title : "Contact", link : "/contact"},
   ]
 
   useEffect(() => {
@@ -45,13 +44,13 @@ function Bottomheader() {
             </div>
             <div className={`categoryList  ${isOpen ? "active" : "" }`}>
               {categories.map((c) => {
-                return <li key={uuidv4()}><Link to ={`/category/${c.slug}`}>{c.name}</Link></li>
+                return <li key={c.slug}><Link to ={`/category/${c.slug}`}>{c.name}</Link></li>
               })}
             </div>
           </div>
           <div className="navLinks">
             {linksNav.map((l) => {
-            return <li key={uuidv4()} className={location.pathname == l.link ? "active" : "" }>
+            return <li key={l.id} className={location.pathname == l.link ? "active" : "" }>
                     <Link to = {l.link}>{l.title}</Link>
                   </li>
             })}

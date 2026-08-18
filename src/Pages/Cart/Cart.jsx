@@ -1,13 +1,12 @@
 import { useContext } from "react"
 import { CartContext } from "../../Components/Context/CartContext"
-import { v4 as uuidv4 } from 'uuid';
 import { IoTrashBin } from "react-icons/io5";
 import './Cart.css'
 import PageTransition from "../../Components/PageTransition";
 
 function Cart() {
     const {cartItem, increaseQuantity, decreaseQuantity, removeFromCart} = useContext(CartContext)
-    console.log(cartItem)
+    
 
     // calculate total price of products that inside the cart
     const totalPrice = cartItem.reduce((a, c) =>  a + c.price * c.quantity ,0)
@@ -23,7 +22,7 @@ function Cart() {
                             <p>Your Cart is an empty</p>
                         ) : (
                             cartItem.map((item) => {
-                                return <div className="itemCart" key={uuidv4()}>
+                                return <div className="itemCart" key={item.id}>
                                     <div className="imageName">
                                         <div className="imgItem">
                                             <img src={item.images[0]} alt="" />

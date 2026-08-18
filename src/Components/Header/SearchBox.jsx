@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Link, useLocation, useNavigate } from 'react-router'
-import { v4 as uuidv4 } from 'uuid';
 
 function SearchBox () {
     const [searchTerm, setSearchTerm] = useState("")
@@ -65,7 +64,7 @@ function SearchBox () {
         (
             <ul className="suggestions">
                 {suggestion.map((item) => {
-                    return <Link key={uuidv4()} to = {`/products/${item.id}`}>
+                    return <Link key={item.id} to = {`/products/${item.id}`}>
                     <li>
                                 <img src={item.images[0]} alt="" />
                                 <span>{item.title}</span>

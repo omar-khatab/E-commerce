@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "../../Components/Context/CartContext"
 import PageTransition from "../../Components/PageTransition"
-import { v4 as uuidv4 } from 'uuid';
 import Product from "../../Components/SlideProduct/Product";
 
 function Favorites () {
@@ -19,7 +18,7 @@ function Favorites () {
                 ) : (
                     <div className="products">
                         {favorites.map((item) => {
-                            return <Product item={item} key={uuidv4()}/>
+                            return <Product item={item} key={item.id}/>
                         })}
                     </div>
                 )}
