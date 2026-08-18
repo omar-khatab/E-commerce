@@ -19,9 +19,6 @@ function Bottomheader() {
     .then(data => setCategories(data))
   },[])
 
-  const arrCategories = categories.map((c) => {
-  return <li key={uuidv4()}><Link to ={`/category/${c.slug}`}>{c.name}</Link></li>
-});
 
   const location = useLocation()
 
@@ -36,11 +33,6 @@ function Bottomheader() {
     setIsOpen(false)
   },[location])
 
-  const linksBottomHeader = linksNav.map((l) => {
-    return <li key={uuidv4()} className={location.pathname == l.link ? "active" : "" }>
-            <Link to = {l.link}>{l.title}</Link>
-          </li>
-  })
 
   return (
     <div className="bottomHeader">
@@ -52,11 +44,17 @@ function Bottomheader() {
               <IoIosArrowDown />
             </div>
             <div className={`categoryList  ${isOpen ? "active" : "" }`}>
-              {arrCategories}
+              {categories.map((c) => {
+                return <li key={uuidv4()}><Link to ={`/category/${c.slug}`}>{c.name}</Link></li>
+              })}
             </div>
           </div>
           <div className="navLinks">
-            {linksBottomHeader}
+            {linksNav.map((l) => {
+            return <li key={uuidv4()} className={location.pathname == l.link ? "active" : "" }>
+                    <Link to = {l.link}>{l.title}</Link>
+                  </li>
+            })}
           </div>
         </nav>
         <div className="categoryIcon">

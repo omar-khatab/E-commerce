@@ -34,3 +34,9 @@
   font-size: 1vw;
   margin: 2.5vw 0;
 }
+@media (max-width: 767px) {
+  .hero .content .btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

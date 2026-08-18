@@ -46,7 +46,6 @@
     gap: 20px;
 }
 .checkout .items .itemCart .imgItem {
-    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,4 +140,19 @@
 .checkout .bottomSummary .buttonDiv button:hover {
     background: transparent;
     color: var(--main-color);
+}
+@media (max-width: 991px) {
+    .checkout .orderSummary {
+        width: 95%;
+    }
+    .checkout .items .itemCart,
+    .checkout .items .itemCart .imageName {
+        gap: 10px;
+    }
+    .checkout .items .itemCart h4 {
+        font-size: 14px;
+    }
+    .checkout .items .itemCart p {
+        font-size: 12px;
+    }
 }

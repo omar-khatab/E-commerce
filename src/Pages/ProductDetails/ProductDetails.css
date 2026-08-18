@@ -21,12 +21,13 @@
 }
 .itemDetails .imgsItem .smImgs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
+    gap: 10px;
 }
 .itemDetails .imgsItem .smImgs img {
-    width: 30%;
+    width: 25%;
 }
 .itemDetails .detailsItem {
     text-align: center;
@@ -96,6 +97,11 @@
 .itemDetails .detailsItem .icons span:hover {
     color: var(--bg-color);
     background-color: var(--main-color);
+}
+@media (max-width: 991px) {
+    .itemDetails .container {
+        flex-direction: column;
+    }
 }
 /* Start Loading ProductDetails */
 .loadingItem .itemDetails .imgsItem {

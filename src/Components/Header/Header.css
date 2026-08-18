@@ -16,7 +16,7 @@ header {
     z-index: 10000;
     background-color: var(--bg-color);
 }
-
+/* Top header */
 .topHeader .container {
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ header {
     flex: 1;
     background-color: var(--bg-color);
     caret-color: var(--main-color);
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .topHeader .searchBox button {
@@ -53,7 +53,7 @@ header {
     gap: 20px;
 }
 .headerIcons .icon {
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     position: relative;
 }
@@ -71,6 +71,31 @@ header {
     align-items: center;
     font-size: 11px;
 }
+@media (max-width : 767px) {
+    .topHeader .container,
+    .headerIcons {
+        gap: 10px;
+    }
+    .topHeader img {
+        max-width: 100px;
+    }
+    .topHeader .searchBox {
+        max-width: 200px;
+    }
+    .topHeader .searchBox input {
+        max-width: 150px;
+    }
+    .topHeader .searchBox input::placeholder {
+        font-size: 12px;
+    }
+    .topHeader .searchBox button {
+        padding: 5px;
+    }
+    .topHeader .headerIcons .icon {
+        font-size: 16px;
+    }
+}
+/* Bottom Header */
 .bottomHeader {
     background-color: var(--main-color);
 }
@@ -85,6 +110,7 @@ header {
     flex: 1;
     gap: 20px;
 }
+
 .bottomHeader nav .categoryNav {
     position: relative;
 }
@@ -163,6 +189,21 @@ header {
     color: var(--bg-color);
 }
 
+@media (max-width : 991px) {
+    .bottomHeader nav {
+        font-size: 14px;
+    }
+}
+@media (max-width : 767px) {
+    .bottomHeader nav {
+        font-size: 10px;
+        gap: 10px;
+    }
+    .bottomHeader .categoryIcon {
+        font-size: 14px;
+        gap: 10px;
+    }
+}
 /* Start Search */
 .searchBoxContainer {
     position: relative;
