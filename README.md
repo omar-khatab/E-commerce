@@ -2,7 +2,7 @@
 
 Live Demo: https://e-commerce-three-coral-58.vercel.app/
 
-Tech: React, Vite, React Router, Tailwind CSS, Context API
+Tech: React, Vite, React Router, Context API
 
 Features:
 - Product listing with filters
