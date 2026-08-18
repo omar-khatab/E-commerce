@@ -9,6 +9,10 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination} from 'swiper/modules';
 
+// import images
+import hero1 from './../images/banner_Hero1.png'
+import hero2 from './../images/banner_Hero2.jpg'
+import hero3 from './../images/banner_Hero3.jpg'
 
 import { Link } from 'react-router';
 function HeroSlider() {
@@ -36,7 +40,7 @@ function HeroSlider() {
                     <p>windows 11/10/8, Tv Box</p>
                     <Link to = "/" className='btn'>Shop Now</Link>
                 </div>
-                <img src="/src/images/banner_Hero1.png" alt="" />
+                <img src={hero1} alt="" />
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
@@ -45,7 +49,7 @@ function HeroSlider() {
                     <p>windows 11/10/8, Tv Box</p>
                     <Link to = "/" className='btn'>Shop Now</Link>
                 </div>
-                <img src="/src/images/banner_Hero2.jpg" alt="" />
+                <img src={hero2} alt="" />
             </SwiperSlide>
             <SwiperSlide>
                 <div className="content">
@@ -54,7 +58,7 @@ function HeroSlider() {
                     <p>windows 11/10/8, Tv Box</p>
                     <Link to = "/" className='btn'>Shop Now</Link>
                 </div>
-                <img src="/src/images/banner_Hero3.jpg" alt="" />
+                <img src={hero3} alt="" />
             </SwiperSlide>
             </Swiper>
         </div>
