@@ -20,9 +20,6 @@ https://e-commerce-three-coral-58.vercel.app/
 - [x] Responsive
 - [x] Animations
 
-### 📸 Screenshot
-![screenshot](./ecommerce.png)
-
 ### 🚀 How to run
 ```bash
 npm install
