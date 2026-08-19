@@ -21,7 +21,7 @@ https://e-commerce-three-coral-58.vercel.app/
 - [x] Animations
 
 ### 📸 Screenshot
-![screenshot](./screenshot.png)
+![screenshot](./ecommerce.png)
 
 ### 🚀 How to run
 ```bash
