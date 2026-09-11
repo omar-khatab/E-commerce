@@ -9,7 +9,7 @@ https://e-commerce-three-coral-58.vercel.app/
 - React
 - Context API
 - Framer Motion
-- Tailwind CSS
+- React Hot Toast
 - Responsive Design
 
 ### ✨ Features
