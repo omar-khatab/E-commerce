@@ -4,9 +4,9 @@ import PageTransition from "../../Components/PageTransition"
 import Product from "../../Components/SlideProduct/Product";
 import { useTranslation } from "react-i18next"
 function Favorites () {
-    const {favorites} = useContext(CartContext)
     const { t } = useTranslation()
-  return (
+    const {favorites} = useContext(CartContext)
+return (
     <PageTransition>
         <div className="categoryProducts favoritePage">
             <div className="container">
@@ -25,7 +25,7 @@ function Favorites () {
             </div>
         </div>
     </PageTransition>
-  )
+    )
 }
 
 export default Favorites

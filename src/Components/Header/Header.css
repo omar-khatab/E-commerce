@@ -207,11 +207,9 @@ header {
 .language-switcher:hover {
     background-color: rgb(17 161 68);
 }
-
 [dir="rtl"] .bottomHeader .categoryIcon a:first-child svg {
     transform: scaleX(-1);
 }
-
 @media (max-width : 991px) {
     .bottomHeader nav {
         font-size: 14px;

@@ -7,20 +7,18 @@ import PageTransition from "../../Components/PageTransition";
 import { useTranslation } from "react-i18next"
 function CategoryPage() {
   const { t } = useTranslation()
-    const {category} = useParams()
-
-    const [categoryProducts, setCategoryProducts] = useState([])
-    const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-      fetch(`https://dummyjson.com/products/category/${category}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setCategoryProducts(data)
-      })
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false))
-    },[category])
+  const {category} = useParams()
+  const [categoryProducts, setCategoryProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    fetch(`https://dummyjson.com/products/category/${category}`)
+    .then((res) => res.json())
+    .then((data) => {
+      setCategoryProducts(data)
+    })
+    .catch((error) => console.log(error))
+    .finally(() => setLoading(false))
+  },[category])
     
   return (
     <PageTransition>

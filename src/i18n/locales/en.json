@@ -43,43 +43,43 @@
       "shopNow": "Shop Now"
     },
     "slide": {
-  "subtitle": "Add bestselling products to weekly line up"
-},
-"product": {
-  "inCart": "In cart",
-  "addedToCart": "added to cart",
-  "viewCart": "View Cart",
-  "addedToFav": "{{title}} added to favorites",
-  "removedFromFav": "{{title}} removed from favorites"
-},
-"cart": {
-  "orderSummary": "Order Summary",
-  "empty": "Your cart is empty",
-  "total": "Total",
-  "placeOrder": "Place Order"
-},
-"favorites": {
-  "title": "Your Favorites",
-  "empty": "No favorite products"
-},
-"details": {
-  "notFound": "Product not found",
-  "availability": "Availability",
-  "brand": "Brand",
-  "stock": "Stock",
-  "hurryUp": "Hurry up! Only",
-  "leftInStock_one": "{{count}} product left in stock",
-"leftInStock_other": "{{count}} products left in stock",
-  "addToCart": "Add to cart",
-  "itemInCart": "Item in cart",
-  "status": {
-    "In Stock": "In Stock",
-    "Low Stock": "Low Stock",
-    "Out of Stock": "Out of Stock"
-  }
-},
-"searchPage": {
-  "resultsFor": "Results for: {{query}}",
-  "notFound": "No results found"
-}
+      "subtitle": "Add bestselling products to weekly line up"
+    },
+    "product": {
+      "inCart": "In cart",
+      "addedToCart": "added to cart",
+      "viewCart": "View Cart",
+      "addedToFav": "{{title}} added to favorites",
+      "removedFromFav": "{{title}} removed from favorites"
+    },
+    "cart": {
+      "orderSummary": "Order Summary",
+      "empty": "Your cart is empty",
+      "total": "Total",
+      "placeOrder": "Place Order"
+    },
+    "favorites": {
+      "title": "Your Favorites",
+      "empty": "No favorite products"
+    },
+    "details": {
+      "notFound": "Product not found",
+      "availability": "Availability",
+      "brand": "Brand",
+      "stock": "Stock",
+      "hurryUp": "Hurry up! Only",
+      "leftInStock_one": "{{count}} product left in stock",
+      "leftInStock_other": "{{count}} products left in stock",
+      "addToCart": "Add to cart",
+      "itemInCart": "Item in cart",
+      "status": {
+        "In Stock": "In Stock",
+        "Low Stock": "Low Stock",
+        "Out of Stock": "Out of Stock"
+      }
+    },
+    "searchPage": {
+      "resultsFor": "Results for: {{query}}",
+      "notFound": "No results found"
+    }
 }

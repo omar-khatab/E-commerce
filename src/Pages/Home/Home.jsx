@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 
 function Home() {
-const { t } = useTranslation()
+  const { t } = useTranslation()
   const [products, setProducts] = useState({})
   // handle loading in fetch data >> data take a time to fetch, so this will return error
   const [loading, setLoading] = useState(true)
@@ -18,7 +18,6 @@ const { t } = useTranslation()
       "tablets",
       "sunglasses"
     ]
-
 
     useEffect(() => {
       const fetchProducts = async () => {

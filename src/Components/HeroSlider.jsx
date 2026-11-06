@@ -14,9 +14,9 @@ import hero1 from './../images/banner_Hero1.png'
 import hero2 from './../images/banner_Hero2.jpg'
 import hero3 from './../images/banner_Hero3.jpg'
 const slides = [hero1, hero2, hero3];
-
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+
 function HeroSlider() {
     const { t, i18n } = useTranslation();
   return (

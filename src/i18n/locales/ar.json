@@ -33,57 +33,57 @@
     "womens-watches": "ساعات حريمي"
   },
   "search": {
-  "placeholder": "ابحث عن المنتجات"
-},
-"hero": {
-  "intro": "نقدم لكم الجديد",
-  "titleLine1": "مايكروسوفت إكس بوكس",
-  "titleLine2": "وحدة تحكم Series X",
-  "description": "ويندوز 11/10/8، تي في بوكس",
-  "shopNow": "تسوق الآن"
-},
-"slide": {
-  "subtitle": "أضف المنتجات الأكثر مبيعًا إلى قائمة الأسبوع"
-},
-"product": {
-  "inCart": "في السلة",
-  "addedToCart": "تمت الإضافة إلى السلة",
-  "viewCart": "عرض السلة",
-  "addedToFav": "تمت إضافة {{title}} إلى المفضلة",
-  "removedFromFav": "تمت إزالة {{title}} من المفضلة"
-},
-"cart": {
-  "orderSummary": "ملخص الطلب",
-  "empty": "سلتك فارغة",
-  "total": "الإجمالي",
-  "placeOrder": "إتمام الطلب"
-},
-"favorites": {
-  "title": "منتجاتك المفضلة",
-  "empty": "لا توجد منتجات مفضلة"
-},
-"details": {
-  "notFound": "المنتج غير موجود",
-  "availability": "التوفر",
-  "brand": "العلامة التجارية",
-  "stock": "المخزون",
-  "hurryUp": "أسرع! فقط",
-  "leftInStock_zero": "لا توجد منتجات متبقية في المخزون",
-"leftInStock_one": "منتج واحد متبقٍ في المخزون",
-"leftInStock_two": "منتجان متبقيان في المخزون",
-"leftInStock_few": "{{count}} منتجات متبقية في المخزون",
-"leftInStock_many": "{{count}} منتجًا متبقيًا في المخزون",
-"leftInStock_other": "{{count}} منتج متبقٍ في المخزون",
-  "addToCart": "أضف إلى السلة",
-  "itemInCart": "المنتج في السلة",
-  "status": {
-    "In Stock": "متوفر",
-    "Low Stock": "كمية محدودة",
-    "Out of Stock": "غير متوفر"
+    "placeholder": "ابحث عن المنتجات"
+  },
+  "hero": {
+    "intro": "نقدم لكم الجديد",
+    "titleLine1": "مايكروسوفت إكس بوكس",
+    "titleLine2": "وحدة تحكم Series X",
+    "description": "ويندوز 11/10/8، تي في بوكس",
+    "shopNow": "تسوق الآن"
+  },
+  "slide": {
+    "subtitle": "أضف المنتجات الأكثر مبيعًا إلى قائمة الأسبوع"
+  },
+  "product": {
+    "inCart": "في السلة",
+    "addedToCart": "تمت الإضافة إلى السلة",
+    "viewCart": "عرض السلة",
+    "addedToFav": "تمت إضافة {{title}} إلى المفضلة",
+    "removedFromFav": "تمت إزالة {{title}} من المفضلة"
+  },
+  "cart": {
+    "orderSummary": "ملخص الطلب",
+    "empty": "سلتك فارغة",
+    "total": "الإجمالي",
+    "placeOrder": "إتمام الطلب"
+  },
+  "favorites": {
+    "title": "منتجاتك المفضلة",
+    "empty": "لا توجد منتجات مفضلة"
+  },
+  "details": {
+    "notFound": "المنتج غير موجود",
+    "availability": "التوفر",
+    "brand": "العلامة التجارية",
+    "stock": "المخزون",
+    "hurryUp": "أسرع! فقط",
+    "leftInStock_zero": "لا توجد منتجات متبقية في المخزون",
+    "leftInStock_one": "منتج واحد متبقٍ في المخزون",
+    "leftInStock_two": "منتجان متبقيان في المخزون",
+    "leftInStock_few": "{{count}} منتجات متبقية في المخزون",
+    "leftInStock_many": "{{count}} منتجًا متبقيًا في المخزون",
+    "leftInStock_other": "{{count}} منتج متبقٍ في المخزون",
+    "addToCart": "أضف إلى السلة",
+    "itemInCart": "المنتج في السلة",
+    "status": {
+      "In Stock": "متوفر",
+      "Low Stock": "كمية محدودة",
+      "Out of Stock": "غير متوفر"
+    }
+  },
+  "searchPage": {
+    "resultsFor": "نتائج البحث عن: {{query}}",
+    "notFound": "لا توجد نتائج"
   }
-},
-"searchPage": {
-  "resultsFor": "نتائج البحث عن: {{query}}",
-  "notFound": "لا توجد نتائج"
-}
 }

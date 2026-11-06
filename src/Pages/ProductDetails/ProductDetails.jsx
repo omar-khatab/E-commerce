@@ -8,6 +8,7 @@ import ProductImages from "./ProductImages";
 import ProductInfo from "./ProductInfo";
 import PageTransition from "../../Components/PageTransition";
 import { useTranslation } from "react-i18next"
+
 function Productdetails() {
     const { t } = useTranslation()
     const {id} = useParams()
@@ -31,7 +32,6 @@ function Productdetails() {
         }
         fetchProduct()
     }, [id])
-    
     
     useEffect(() => {
         // to confirm that the product is existed 

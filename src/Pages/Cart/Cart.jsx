@@ -5,10 +5,10 @@ import './Cart.css'
 import PageTransition from "../../Components/PageTransition";
 import { useTranslation } from "react-i18next"
 function Cart() {
+    
     const { t } = useTranslation()
     const {cartItem, increaseQuantity, decreaseQuantity, removeFromCart} = useContext(CartContext)
     
-
     // calculate total price of products that inside the cart
     const totalPrice = cartItem.reduce((a, c) =>  a + c.price * c.quantity ,0)
 

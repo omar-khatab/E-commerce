@@ -5,6 +5,7 @@ import SlideProductLoading from "../Components/SlideProduct/SlideProductLoading"
 import Product from "../Components/SlideProduct/Product";
 import { useTranslation } from "react-i18next";
 function SearchResults() {
+  
     const { t } = useTranslation()
     // get the string after query that inside the link of search
     const query = new URLSearchParams(useLocation().search).get("query")

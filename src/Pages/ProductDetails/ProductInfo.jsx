@@ -5,6 +5,7 @@ import { useContext } from "react"
 import { useNavigate } from "react-router"
 import toast from "react-hot-toast"
 import { useTranslation } from "react-i18next"
+
 function ProductInfo({product}) {
     const { t } = useTranslation()
     const {cartItem, addToCart, favorites, addToFavorite, removeFromFav} = useContext(CartContext)
@@ -16,7 +17,6 @@ function ProductInfo({product}) {
     toast.success(
         <div className="toastWrapper">
         <img src= {product.images[0]} alt="" className="toastImg"/>
-
         <div className="toastContent">
             <strong>{product.title}</strong>
             <p>{t("product.addedToCart")}</p>
