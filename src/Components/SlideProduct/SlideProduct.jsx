@@ -8,31 +8,31 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Navigation } from 'swiper/modules';
+import { useTranslation } from 'react-i18next'
 
 function SlideProduct({title, data}) {
-
+ const { t, i18n } = useTranslation()
     
     return (
         <div className='slideProduct slide'>
             <div className="container">
                 <div className="topSlide">
                     <h2>{title}</h2>
-                    <p>Add bestselling products to weekly line up</p>
+                    <p>{t("slide.subtitle")}</p>
                 </div>
-            <Swiper  
-                    autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                    }}
-                    loop = {true} 
-                    slidesPerView={4} 
-                    navigation={true} 
-                    modules={[Autoplay, Navigation]} 
+                 <Swiper
+                    key={i18n.resolvedLanguage}
+                    dir={i18n.dir()}
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    loop={true}
+                    slidesPerView={4}
+                    navigation={true}
+                    modules={[Autoplay, Navigation]}
                     className="mySwiper">
-                        {data.map((p) => {
-                            return <SwiperSlide><Product item = {p} /></SwiperSlide>
-                        })}
-            </Swiper>
+                    {data.map((p) => (
+                        <SwiperSlide key={p.id}><Product item={p} /></SwiperSlide>
+                    ))}
+                </Swiper>
                 
             </div>
         </div>

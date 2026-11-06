@@ -3,11 +3,11 @@ import PageTransition from "../../Components/PageTransition";
 import SlideProduct from "../../Components/SlideProduct/SlideProduct"
 import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoading";
 import './Home.css'
-
+import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 
 function Home() {
-
+const { t } = useTranslation()
   const [products, setProducts] = useState({})
   // handle loading in fetch data >> data take a time to fetch, so this will return error
   const [loading, setLoading] = useState(true)
@@ -56,7 +56,7 @@ function Home() {
       })
       :
       categories.map((c) => {
-        return <SlideProduct key={c} data = {products[c]} title = {c.replace("-", " ")} />
+        return <SlideProduct key={c} data={products[c]} title={t(`categories.${c}`)} />
       })
       }
   </PageTransition>

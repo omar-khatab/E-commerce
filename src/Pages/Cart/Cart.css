@@ -35,7 +35,7 @@
     justify-content: space-between;
     height: 125px;
     border-bottom: 1px solid var(--border-color);
-    padding-right: 20px;
+    padding-inline-end: 20px;
 }
 .checkout .items .itemCart:last-child {
     border-bottom: none;
@@ -92,7 +92,6 @@
     cursor: pointer;
     font-size: 20px;
     border-radius: 2px;
-    border: 1px;
 }
 .checkout .items .itemCart .quantity {
     font-size: 18px;

@@ -103,6 +103,13 @@
         flex-direction: column;
     }
 }
+/* Star Not Found Page */
+.notFound {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--main-color);
+}
+/* End Not Found Page */
 /* Start Loading ProductDetails */
 .loadingItem .itemDetails .imgsItem {
     height: 500px;

@@ -19,18 +19,21 @@ function SlideProductLoading() {
                     <div className="product skelton">
                         <div className="imgProduct">
                             <div className="content">
-
                             </div>
                         </div>
                     </div>
                     <div className="product skelton">
                         <div className="imgProduct">
                             <div className="content">
-
                             </div>
                         </div>
                     </div>
-
+                    <div className="product skelton">
+                        <div className="imgProduct">
+                            <div className="content">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

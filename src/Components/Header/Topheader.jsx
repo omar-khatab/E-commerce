@@ -17,17 +17,17 @@ function Topheader() {
             </Link>
             <SearchBox/>
             <div className="headerIcons">
-                <div className="icon">
-                    <Link to="/favorites">
-                    <FaRegHeart />
-                    <span className="count">{favorites.length}</span>
-                    </Link>
-                </div>
-                    <Link to = "/cart">
-                <div className="icon">
-                    <FaShoppingCart />
-                    <span className="count">{cartItem.length}</span>
-                </div>
+                <Link to="/favorites">
+                    <div className="icon">
+                            <FaRegHeart />
+                            <span className="count">{favorites.length}</span>
+                    </div>
+                </Link>
+                <Link to = "/cart">
+                    <div className="icon">
+                        <FaShoppingCart />
+                        <span className="count">{cartItem.length}</span>
+                    </div>
                 </Link>
             </div>
         </div>

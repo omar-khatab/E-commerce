@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
 /* font-family: "Roboto", sans-serif; */
 /* font-family: "Lato", sans-serif; */
@@ -59,6 +60,7 @@ li {
 input, textarea, button, select {
     outline: none;
     border: none;
+    font-family: inherit;
 }
 
 /* Start Global Rules */
@@ -155,3 +157,12 @@ input, textarea, button, select {
     border-radius: 20px;
 }
 /* End Toast */
+/* Start RTL fonts */
+[dir="rtl"] body,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+    font-family: "Cairo", sans-serif;
+}
+/* End RTL fonts */

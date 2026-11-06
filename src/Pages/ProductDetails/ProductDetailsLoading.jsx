@@ -5,7 +5,6 @@ return (
     <div className="itemDetails">
             <div className="container">
                 <div className="imgsItem skelton">
-
                 </div>
                 <div className="detailsItem">
                     <h5 className="loadingTextDetails skelton"></h5>

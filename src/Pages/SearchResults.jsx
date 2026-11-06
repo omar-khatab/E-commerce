@@ -3,8 +3,9 @@ import { useLocation } from "react-router";
 import PageTransition from "../Components/PageTransition";
 import SlideProductLoading from "../Components/SlideProduct/SlideProductLoading";
 import Product from "../Components/SlideProduct/Product";
-
+import { useTranslation } from "react-i18next";
 function SearchResults() {
+    const { t } = useTranslation()
     // get the string after query that inside the link of search
     const query = new URLSearchParams(useLocation().search).get("query")
     
@@ -38,7 +39,7 @@ function SearchResults() {
         (
           <div className="container">
             <div className="topSlide">
-                <h2>Results For : {query}</h2>
+                <h2>{t("searchPage.resultsFor", { query })}</h2>
             </div>
           <div className="products">
             {results.map((item) => {
@@ -49,7 +50,7 @@ function SearchResults() {
         )
       ) : (
       <div className="container">
-            <p>Results Not Found</p>
+            <p>{t("searchPage.notFound")}</p>
       </div>
       )
       }

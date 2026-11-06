@@ -4,8 +4,9 @@ import Product from "../../Components/SlideProduct/Product"
 import './CategoryPage.css'
 import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoading";
 import PageTransition from "../../Components/PageTransition";
-
+import { useTranslation } from "react-i18next"
 function CategoryPage() {
+  const { t } = useTranslation()
     const {category} = useParams()
 
     const [categoryProducts, setCategoryProducts] = useState([])
@@ -29,8 +30,8 @@ function CategoryPage() {
       ):(
           <div className="container">
             <div className="topSlide">
-                <h2>{category.replace("-", " ")} : {categoryProducts.limit}</h2>
-                <p>Add bestselling products to weekly line up</p>
+              <h2>{t(`categories.${category}`, { defaultValue: category.replace("-", " ") })} : {categoryProducts.total}</h2>
+              <p>{t("slide.subtitle")}</p>
             </div>
           <div className="products">
             {categoryProducts.products.map((item) => {

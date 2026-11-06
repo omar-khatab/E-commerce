@@ -4,9 +4,9 @@ import { CartContext } from "../../Components/Context/CartContext"
 import { useContext } from "react"
 import { useNavigate } from "react-router"
 import toast from "react-hot-toast"
-
+import { useTranslation } from "react-i18next"
 function ProductInfo({product}) {
-
+    const { t } = useTranslation()
     const {cartItem, addToCart, favorites, addToFavorite, removeFromFav} = useContext(CartContext)
     // target the product that in the cart
     const isInCart = cartItem.some((i) => i.id === product.id)
@@ -19,8 +19,8 @@ function ProductInfo({product}) {
 
         <div className="toastContent">
             <strong>{product.title}</strong>
-            <p>added to Cart</p>
-            <button className="btn" onClick={() => navigate("/cart")}>View Cart</button>
+            <p>{t("product.addedToCart")}</p>
+            <button className="btn" onClick={() => navigate("/cart")}>{t("product.viewCart")}</button>
         </div>
         </div>
     )
@@ -33,13 +33,13 @@ function ProductInfo({product}) {
         if (isInfavorite) {
             removeFromFav(product.id)
             toast.error(
-            `${product.title} removed from favorites`
-        )
+                t("product.removedFromFav", { title: product.title })
+            )
         } else {
             addToFavorite(product)
             toast.success(
-            `${product.title} added to favorites`
-        )
+                t("product.addedToFav", { title: product.title })
+            )
         }
     }
 
@@ -53,14 +53,15 @@ function ProductInfo({product}) {
                         <FaStar />
                         <FaRegStarHalfStroke />
                     </div>
-                    <p className="price">$ {product.price}</p>
-                    <h5>Availability : <span>{product.availabilityStatus}</span></h5>
-                    <h5>Brand : <span>{product.brand}</span></h5>
-                    <h5>Stock : <span>{product.stock}</span></h5>
-                    <p className="desc">{product.description}</p>
-                    <h5 className="stock">Harry Up ! Only <span>{product.stock} products left in stock</span></h5>
+                    <p className="price"><bdi>$ {product.price}</bdi></p>
+                    <h5>{t("details.availability")} : <span>{t(`details.status.${product.availabilityStatus}`, { defaultValue: product.availabilityStatus })}</span></h5>
+                    <h5>{t("details.brand")} : <span>{product.brand}</span></h5>
+                    <h5>{t("details.stock")} : <span>{product.stock}</span></h5>
+                    <p className="desc" dir="auto">{product.description}</p>
+                    <h5 className="stock">{t("details.hurryUp")} <span>{t("details.leftInStock", { count: product.stock })}</span></h5>
                     <button className={`btn ${isInCart ? "inCart" : "" }`} onClick={handleAddToCart}>
-                        {isInCart ? "Item in cart" : "Add to cart"} <FaShoppingCart /></button>
+                        {isInCart ? t("details.itemInCart") : t("details.addToCart")} <FaShoppingCart />
+                    </button>
                     <div className="icons">
                         <span 
                         className={`${isInfavorite ? "inFav" : "" }`}

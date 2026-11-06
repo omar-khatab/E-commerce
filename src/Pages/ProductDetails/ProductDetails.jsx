@@ -7,9 +7,9 @@ import SlideProductLoading from "../../Components/SlideProduct/SlideProductLoadi
 import ProductImages from "./ProductImages";
 import ProductInfo from "./ProductInfo";
 import PageTransition from "../../Components/PageTransition";
-
+import { useTranslation } from "react-i18next"
 function Productdetails() {
-    
+    const { t } = useTranslation()
     const {id} = useParams()
 
     const [product, setProduct] = useState(null)
@@ -48,7 +48,7 @@ function Productdetails() {
 
     
     // if product is not found or error in fetch data
-    if(!product) return <p>Product Not Found</p>
+    if (!loading && !product) return <h1 className="notFound">{t("details.notFound")}</h1>
 
     return (
         <PageTransition>
@@ -68,7 +68,10 @@ function Productdetails() {
         {loadingRelatedProducts ? (
             <SlideProductLoading/>
             ):(
-            <SlideProduct title = {product.category.replace("-", " ")} data = {relatedProducts} />
+            <SlideProduct
+                title={t(`categories.${product.category}`, { defaultValue: product.category.replace("-", " ") })}
+                data={relatedProducts}
+            />
             )
         }
         </PageTransition>

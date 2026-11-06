@@ -21,6 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .topHeader .searchBox {
@@ -38,7 +39,7 @@ header {
     flex: 1;
     background-color: var(--bg-color);
     caret-color: var(--main-color);
-    padding-left: 10px;
+    padding-inline-start: 10px;
 }
 
 .topHeader .searchBox button {
@@ -51,6 +52,7 @@ header {
 .headerIcons {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 .headerIcons .icon {
     font-size: 22px;
@@ -59,8 +61,8 @@ header {
 }
 .headerIcons .count {
     position: absolute;
-    top: -5px;
-    right: -10px;
+    inset-block-start: -5px;
+    inset-inline-end: -10px;
     color: var(--bg-color);
     background-color: var(--main-color);
     border-radius: 50%;
@@ -158,6 +160,7 @@ header {
     color: var(--bg-color);
     font-weight: 600;
 }
+
 .bottomHeader nav .navLinks {
     display: flex;
     flex-basis: 60%;
@@ -182,11 +185,31 @@ header {
 }
 .bottomHeader .categoryIcon {
     display: flex;
+    align-items: center;
     gap: 20px;
     font-size: 20px;
 }
+.bottomHeader .categoryIcon a {
+    display: flex;
+}
 .bottomHeader .categoryIcon svg {
     color: var(--bg-color);
+}
+.language-switcher {
+    font-size: 18px;
+    color: var(--bg-color);
+    background-color: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: var(--duration-time);
+    height: 50px;
+}
+.language-switcher:hover {
+    background-color: rgb(17 161 68);
+}
+
+[dir="rtl"] .bottomHeader .categoryIcon a:first-child svg {
+    transform: scaleX(-1);
 }
 
 @media (max-width : 991px) {
@@ -199,9 +222,16 @@ header {
         font-size: 10px;
         gap: 10px;
     }
+    .bottomHeader nav .categoryBtn p {
+        max-width: 55px;
+    }
     .bottomHeader .categoryIcon {
         font-size: 14px;
         gap: 10px;
+    }
+    .language-switcher {
+        font-size: 10px;
+        padding: 5px;
     }
 }
 /* Start Search */

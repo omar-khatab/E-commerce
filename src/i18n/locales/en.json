@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "browseCategory": "Browse Categories"
+  },
+  "categories": {
+    "beauty": "Beauty",
+    "fragrances": "Fragrances",
+    "furniture": "Furniture",
+    "groceries": "Groceries",
+    "home-decoration": "Home Decoration",
+    "kitchen-accessories": "Kitchen Accessories",
+    "laptops": "Laptops",
+    "mens-shirts": "Men's Shirts",
+    "mens-shoes": "Men's Shoes",
+    "mens-watches": "Men's Watches",
+    "mobile-accessories": "Mobile Accessories",
+    "motorcycle": "Motorcycle",
+    "skin-care": "Skin Care",
+    "smartphones": "Smartphones",
+    "sports-accessories": "Sports Accessories",
+    "sunglasses": "Sunglasses",
+    "tablets": "Tablets",
+    "tops": "Tops",
+    "vehicle": "Vehicle",
+    "womens-bags": "Women's Bags",
+    "womens-dresses": "Women's Dresses",
+    "womens-jewellery": "Women's Jewellery",
+    "womens-shoes": "Women's Shoes",
+    "womens-watches": "Women's Watches"
+    },
+    "search": {
+    "placeholder": "Search for products"
+    },
+    "hero": {
+      "intro": "Introducing the new",
+      "titleLine1": "Microsoft Xbox",
+      "titleLine2": "Series X Controller",
+      "description": "Windows 11/10/8, TV Box",
+      "shopNow": "Shop Now"
+    },
+    "slide": {
+  "subtitle": "Add bestselling products to weekly line up"
+},
+"product": {
+  "inCart": "In cart",
+  "addedToCart": "added to cart",
+  "viewCart": "View Cart",
+  "addedToFav": "{{title}} added to favorites",
+  "removedFromFav": "{{title}} removed from favorites"
+},
+"cart": {
+  "orderSummary": "Order Summary",
+  "empty": "Your cart is empty",
+  "total": "Total",
+  "placeOrder": "Place Order"
+},
+"favorites": {
+  "title": "Your Favorites",
+  "empty": "No favorite products"
+},
+"details": {
+  "notFound": "Product not found",
+  "availability": "Availability",
+  "brand": "Brand",
+  "stock": "Stock",
+  "hurryUp": "Hurry up! Only",
+  "leftInStock_one": "{{count}} product left in stock",
+"leftInStock_other": "{{count}} products left in stock",
+  "addToCart": "Add to cart",
+  "itemInCart": "Item in cart",
+  "status": {
+    "In Stock": "In Stock",
+    "Low Stock": "Low Stock",
+    "Out of Stock": "Out of Stock"
+  }
+},
+"searchPage": {
+  "resultsFor": "Results for: {{query}}",
+  "notFound": "No results found"
+}
+}

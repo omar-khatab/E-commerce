@@ -3,8 +3,9 @@ import { CartContext } from "../../Components/Context/CartContext"
 import { IoTrashBin } from "react-icons/io5";
 import './Cart.css'
 import PageTransition from "../../Components/PageTransition";
-
+import { useTranslation } from "react-i18next"
 function Cart() {
+    const { t } = useTranslation()
     const {cartItem, increaseQuantity, decreaseQuantity, removeFromCart} = useContext(CartContext)
     
 
@@ -15,11 +16,11 @@ function Cart() {
         <PageTransition>
             <div className="checkout">
                 <div className="orderSummary">
-                    <h1>Order Summary</h1>
+                    <h1>{t("cart.orderSummary")}</h1>
                     <div className="items">
                         {/* Avoiding error in case of the cart is an empty */
                         cartItem.length == 0 ? (
-                            <p>Your Cart is an empty</p>
+                            <p>{t("cart.empty")}</p>
                         ) : (
                             cartItem.map((item) => {
                                 return <div className="itemCart" key={item.id}>
@@ -45,11 +46,11 @@ function Cart() {
                     </div>
                     <div className="bottomSummary">
                         <div className="shopTable">
-                            <p>Total</p>
+                            <p>{t("cart.total")}</p>
                             <span className="totalCheckout">${totalPrice.toFixed(2)}</span>
                         </div>
                         <div className="buttonDiv">
-                            <button type="submit">Place Order</button>
+                            <button type="submit">{t("cart.placeOrder")}</button>
                         </div>
                     </div>
                 </div>

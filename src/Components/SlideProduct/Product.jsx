@@ -9,8 +9,9 @@ import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import { FaCheck } from "react-icons/fa";
 import toast from "react-hot-toast";
-
+import { useTranslation } from "react-i18next";
 function Product({item}) {
+  const { t } = useTranslation()
   const {cartItem, addToCart, favorites, addToFavorite, removeFromFav} = useContext(CartContext)
 
   // target the product that in the cart
@@ -25,8 +26,8 @@ function Product({item}) {
 
         <div className="toastContent">
           <strong>{item.title}</strong>
-          <p>added to Cart</p>
-          <button className="btn" onClick={() => navigate("/cart")}>View Cart</button>
+          <p>{t("product.addedToCart")}</p>
+          <button className="btn" onClick={() => navigate("/cart")}>{t("product.viewCart")}</button>
         </div>
       </div>
       
@@ -40,12 +41,12 @@ function Product({item}) {
     if (isInfavorite) {
       removeFromFav(item.id)
       toast.error(
-        `${item.title} removed from favorites`
+        t("product.removedFromFav", { title: item.title })
       )
     } else {
       addToFavorite(item)
       toast.success(
-        `${item.title} added to favorites`
+        t("product.addedToFav", { title: item.title })
       )
     }
   }
@@ -53,7 +54,7 @@ function Product({item}) {
   return (
     <div className ={`product ${isInCart ? "inCart" : "" }`}>
       <Link to = {`/products/${item.id}`}>
-        <span className="statusCart"><FaCheck /> In cart</span>
+        <span className="statusCart"><FaCheck /> {t("product.inCart")}</span>
 
         <div className="imgProduct">
           <img src={item.images[0]} alt="" />
@@ -68,7 +69,7 @@ function Product({item}) {
           <FaStar />
           <FaRegStarHalfStroke />
         </div>
-        <span className="price">$ {item.price}</span>
+        <span className="price"><bdi>$ {item.price}</bdi></span>
         <div className="icons">
           <span onClick={(e) => {
             e.preventDefault()

@@ -12,6 +12,7 @@ import SearchResults from "./Pages/SearchResults"
 import Favorites from "./Pages/Favorites/Favorites"
 
 
+
 function App() {
 
   return (

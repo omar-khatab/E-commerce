@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Link, useLocation, useNavigate } from 'react-router'
-
+import { useTranslation } from 'react-i18next'
 function SearchBox () {
+    const { t } = useTranslation()
     const [searchTerm, setSearchTerm] = useState("")
     const navigate = useNavigate()
     const [suggestion, setSuggestion] = useState([])
@@ -53,7 +54,7 @@ function SearchBox () {
     return (
     <div className='searchBoxContainer'>
         <form onSubmit={handleSubmit} className="searchBox" >
-            <input type = "text" name = "search" id = "search" placeholder="Search for Products " 
+            <input type = "text" name = "search" id = "search" placeholder={t("search.placeholder")}
             onChange={(e) => setSearchTerm(e.target.value)}
             autoComplete='off'/>
             <button type="submit">
