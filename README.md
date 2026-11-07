@@ -7,7 +7,7 @@ A modern e-commerce storefront built with React and Vite, designed to deliver a 
 ## 🎬 Demo
 
 ### Hero Slider + Language Toggle (AR / EN) - Live
-[Hero Demo](./assets/ecom-hero-demo.gif)
+[Hero Demo](./assets/ecommerce-demo.gif)
 *Hero Slider auto-plays, Language Toggle AR <-> EN with RTL, Search works live*
 
 ### Product Browsing + Cart - Live
