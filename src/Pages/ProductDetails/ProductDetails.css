@@ -122,6 +122,14 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+@media (max-width: 991px) {
+    .loadingItem .itemDetails .imgsItem {
+        width: 80%;
+    }
+    .loadingItem .itemDetails .detailsItem {
+        width: 80%;
+    }
+}
 .loadingItem .itemDetails .detailsItem h5 {
     height: 25px;
 }
