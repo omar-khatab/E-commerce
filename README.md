@@ -23,7 +23,7 @@ A modern e-commerce storefront built with React and Vite, designed to deliver a 
 
 ## 🧩 Architecture - How The Store Works
 
-[E-Commerce Architecture](./assets/ecommerce-architecture.png)
+[E-Commerce Architecture](./assets/ecom-architecture.png)
 
 ```mermaid
 flowchart TB
