@@ -4,8 +4,6 @@ A modern e-commerce storefront built with React and Vite, designed to deliver a 
 
 **🌐 Live Demo:** https://e-commerce-three-coral-58.vercel.app/ · [Source Code](https://github.com/omar-khatab/E-commerce)
 
-[E-Commerce Cover](./assets/ecom-home.png)
-
 ## 🎬 Demo
 
 ### Hero Slider + Language Toggle (AR / EN) - Live
@@ -96,13 +94,21 @@ flowchart TB
 
 ### User Journey - Block System
 ```mermaid
-flowchart LR
-    U["USER"] --> B["BROWSE<br>Search, Filter, Category"]
-    B --> P["PRODUCT DETAILS<br>Gallery, Info"]
-    P --> C["CART<br>Context API"]
-    C --> CK["CHECKOUT UI"]
-    C --> LS2["LocalStorage<br>Persistent"]
-    CK --> Toast["Toast + Animation<br>Framer Motion"]
+flowchart TB
+    U["USER"]
+    B["BROWSE<br>Search, Filter, Category"]
+    P["PRODUCT DETAILS<br>Gallery, Info"]
+    C["CART<br>Context API"]
+    CK["CHECKOUT UI"]
+    LS2["LocalStorage<br>Persistent"]
+    Toast["Toast + Animation"]
+
+    U --> B
+    B --> P
+    P --> C
+    C --> CK
+    C --> LS2
+    CK --> Toast
 
     style U fill:#1E40AF,stroke:#3B82F6,color:#FFFFFF,stroke-width:3px
     style B fill:#166534,stroke:#22C55E,color:#FFFFFF,stroke-width:3px
@@ -150,12 +156,6 @@ This project is a full-featured online shop that pulls product information from 
 ```text
 .
 ├── .gitignore
-├── assets/
-│   ├── ecom-details.png
-│   ├── ecom-hero-demo.gif
-│   ├── ecom-home.png
-│   ├── ecommerce-demo.gif
-│   └── ecom-shop-demo.gif
 ├── eslint.config.js
 ├── index.html
 ├── package-lock.json
