@@ -42,7 +42,7 @@ function HeroSlider() {
                   {t("hero.shopNow")}
                 </Link>
               </div>
-              <img src={img} alt="" />
+              <img src={img} alt={img.title} />
             </SwiperSlide>
           ))}
         </Swiper>
